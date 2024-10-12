@@ -1,0 +1,256 @@
+html {
+  max-height: 100vh;
+  overflow: hidden;
+  background: #ccdb9c;
+}
+body {
+  margin: 0;
+}
+button {
+  outline: none;
+  appearance: none;
+  border: none;
+}
+.wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  left: 0;
+  top: 0;
+}
+.result-container {
+  display: none;
+  z-index: 2;
+}
+.result {
+  display: flex;
+  background: black;
+  color: white;
+  border: 3px solid white;
+  filter: url(#pixelate2) url(#greenScale);
+  font-size: 56px;
+  justify-content: center;
+  align-items: center;
+}
+.start-screen,
+.result {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 75%;
+  height: 50%;
+  transform: translate(-50%, -50%);
+  padding: 24px;
+}
+.start-screen {
+  z-index: 1;
+}
+.title {
+  filter: url(#greenScale) url(#pixelate2);
+  width: 50%;
+  height: 50%;
+  margin: auto;
+  padding: 0 48px 24px 48px;
+  background-color: black;
+  box-shadow: inset -5px -5px black, inset 10px 10px aliceblue,
+    inset -10px -10px aliceblue;
+  margin-bottom: 12px;
+}
+.titleImage {
+  background-image: url("title.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+}
+.brainImage {
+  position: absolute;
+  top: -65%;
+  left: -45%;
+  background-image: url("brain.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  height: 100%;
+  width: 100%;
+  z-index: 2;
+  transform: rotate(-25deg);
+}
+.device {
+  border: 42px solid grey;
+  background: #9bbc0f;
+  position: relative;
+  border-radius: 0 0 10% 0;
+  padding: 12px;
+  margin: auto;
+  width: 75vw;
+  height: 80vh;
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr;
+  gap: 4px;
+  grid-template-areas:
+    "info"
+    "content";
+}
+.info {
+  display: none;
+  place-self: start;
+  width: fit-content;
+  padding: 12px;
+  background: grey;
+  border: 2px solid black;
+  filter: url(#greenScale) url(#pixelate2);
+  font-size: 24px;
+}
+.counter {
+  font-size: 92px;
+  filter: url(#pixelate) url(#greenScale);
+  grid-area: counter;
+  color: grey;
+}
+.start {
+  align-self: start;
+  justify-self: end;
+}
+.points,
+.level {
+  color: white;
+}
+.content {
+  opacity: 0;
+  display: grid;
+  position: absolute;
+  padding: 10px;
+  width: 75%;
+  gap: 12px;
+  place-self: center;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  place-items: center;
+  grid-template-areas:
+    ".t."
+    "cl counter cr"
+    ".b.";
+}
+@media screen and (max-width: 600px) {
+  .device {
+    margin: auto;
+    height: 30vh;
+  }
+  .counter {
+    font-size: 36px;
+    filter: url(#pixelate2) url(#greenScale);
+  }
+  .content {
+    width: 70%;
+    filter: url(#pixelate2) url(#greenScale);
+    gap: 4px;
+  }
+  .info {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .t,
+  .cl,
+  .cr,
+  .b {
+    width: 85%;
+    filter: url(#pixelate3) url(#greenScale);
+  }
+  .result {
+    font-size: 18px;
+    padding: 0;
+  }
+}
+@media screen and (min-width: 1000px) and (max-height: 1000px) {
+  .device {
+    width: 60vw;
+    height: 70vh;
+  }
+  .content {
+    width: 60%;
+  }
+  .result {
+    filter: url(#pixelate2) url(#greenScale);
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 1000px) {
+  .device {
+    width: 700px;
+    height: 700px;
+  }
+  .result {
+    filter: url(#pixelate2) url(#greenScale);
+    font-size: 36px;
+  }
+}
+.button11 {
+  grid-area: t;
+  width: 90%;
+}
+.button21 {
+  grid-area: cl;
+  width: 90%;
+}
+.button22 {
+  grid-area: cr;
+  width: 90%;
+}
+.button31 {
+  grid-area: b;
+  width: 90%;
+}
+.t,
+.cl,
+.cr,
+.b {
+  border-radius: 100%;
+  width: 100%;
+  opacity: 70%;
+  cursor: pointer;
+  filter: url(#pixelate) url(#greenScale);
+}
+.t:enabled:active,
+.cl:enabled:active,
+.cr:enabled:active,
+.b:enabled:active,
+.active {
+  opacity: 1;
+}
+.t {
+  background: radial-gradient(yellow 20%, transparent 60%, yellow 70%);
+}
+.cl {
+  background: radial-gradient(crimson, transparent 60%, crimson 70%);
+}
+.cr {
+  background: radial-gradient(green 20%, transparent 60%, green 70%);
+}
+.b {
+  background: radial-gradient(orange 20%, transparent 60%, orange 70%);
+}
+
+.startBtn {
+  background-color: beige;
+  border-radius: 5px;
+  color: black;
+  width: fit-content;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 4px 24px;
+  cursor: pointer;
+  filter: url(#greenScale) url(#pixelate2);
+  margin: auto;
+}
+.try-again {
+  margin-bottom: 20px;
+}
+.startBtn:active {
+  background-color: grey;
+}
