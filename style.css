@@ -134,63 +134,6 @@ button {
     "cl counter cr"
     ".b.";
 }
-@media screen and (max-width: 600px) {
-  .device {
-    margin: auto;
-    height: 30vh;
-  }
-  .counter {
-    font-size: 36px;
-    filter: url(#pixelate2) url(#greenScale);
-  }
-  .content {
-    width: 70%;
-    filter: url(#greenScale);
-    gap: 4px;
-  }
-  .info {
-    font-size: 12px;
-    padding: 4px 8px;
-  }
-  .t,
-  .cl,
-  .cr,
-  .b {
-    width: 85%;
-    filter: url(#pixelate2) url(#greenScale);
-  }
-  .result {
-    font-size: 18px;
-    padding: 0;
-  }
-  .startBtn.try-again {
-    font-size: 28px;
-    margin-bottom: -8px;
-  }
-}
-@media screen and (min-width: 1000px) and (max-height: 1000px) {
-  .device {
-    width: 60vw;
-    height: 70vh;
-  }
-  .content {
-    width: 60%;
-  }
-  .result {
-    filter: url(#pixelate2) url(#greenScale);
-    font-size: 48px;
-  }
-}
-@media screen and (min-width: 1300px) and (min-height: 1000px) {
-  .device {
-    width: 700px;
-    height: 700px;
-  }
-  .result {
-    filter: url(#pixelate2) url(#greenScale);
-    font-size: 36px;
-  }
-}
 .button11 {
   grid-area: t;
   width: 90%;
@@ -248,7 +191,7 @@ button {
   font-weight: bold;
   padding: 4px 24px;
   cursor: pointer;
-  filter: url(#greenScale) url(#pixelate2);
+  filter: url(#pixelate2) url(#greenScale);
   margin: auto;
 }
 .try-again {
@@ -256,4 +199,61 @@ button {
 }
 .startBtn:active {
   background-color: grey;
+}
+@media screen and (max-width: 600px) {
+  .device {
+    margin: auto;
+    height: 30vh;
+  }
+  .counter {
+    font-size: 36px;
+    filter: url(#pixelate2) url(#greenScale);
+  }
+  .content {
+    width: 70%;
+    filter: url(#greenScale);
+    gap: 4px;
+  }
+  .info {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+  .t,
+  .cl,
+  .cr,
+  .b {
+    width: 85%;
+    filter: url(#pixelate2) url(#greenScale);
+  }
+  .result {
+    font-size: 18px;
+    padding: 0;
+  }
+  .startBtn.try-again {
+    font-size: 28px;
+    margin-bottom: -8px;
+  }
+}
+@media screen and (min-width: 1000px) and (max-height: 1000px) {
+  .device {
+    width: 60vw;
+    height: 70vh;
+  }
+  .content {
+    width: 60%;
+  }
+  .result {
+    filter: url(#pixelate2) url(#greenScale);
+    font-size: 48px;
+  }
+}
+@media screen and (min-width: 1300px) and (min-height: 1000px) {
+  .device {
+    width: 700px;
+    height: 700px;
+  }
+  .result {
+    filter: url(#pixelate2) url(#greenScale);
+    font-size: 36px;
+  }
 }
