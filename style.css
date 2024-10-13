@@ -228,9 +228,12 @@ button {
     font-size: 18px;
     padding: 0;
   }
-  .startBtn.try-again {
-    font-size: 28px;
-    margin-bottom: -8px;
+  .try-again {
+    position: absolute;
+    font-size: 20px;
+    bottom: -8px;
+    left: 50%;
+    transform: translate(-50%);
   }
   .startBtn {
     filter: url(#greenScale);
