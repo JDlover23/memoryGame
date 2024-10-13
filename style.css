@@ -178,7 +178,6 @@ button {
 .b {
   background: radial-gradient(orange 20%, transparent 60%, orange 70%);
 }
-
 .startBtn {
   background-color: beige;
   border-radius: 5px;
@@ -187,12 +186,12 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: 36px;
-  font-weight: bold;
-  padding: 4px 24px;
   cursor: pointer;
   filter: url(#pixelate2) url(#greenScale);
   margin: auto;
+  font-size: 36px;
+  font-weight: bold;
+  padding: 4px 24px;
 }
 .try-again {
   margin-bottom: 20px;
@@ -223,7 +222,7 @@ button {
   .cr,
   .b {
     width: 85%;
-    filter: url(#pixelate2) url(#greenScale);
+    filter: url(#greenScale);
   }
   .result {
     font-size: 18px;
@@ -232,6 +231,36 @@ button {
   .startBtn.try-again {
     font-size: 28px;
     margin-bottom: -8px;
+  }
+  .startBtn {
+    filter: url(#greenScale);
+  }
+  .brainImage {
+    transform: rotate(-25deg) scale(0.7);
+    top: -35%;
+    left: -30%;
+  }
+  .counter {
+    filter: url(#greenScale);
+  }
+  .info {
+    filter: url(#greenScale);
+  }
+}
+@media not all and (min-resolution: 0.001dpcm) {
+  .startBtn {
+    filter: url(#greenScale);
+  }
+  .brainImage {
+    transform: rotate(-25deg) scale(0.7);
+    top: -35%;
+    left: -30%;
+  }
+  .counter {
+    filter: url(#greenScale);
+  }
+  .info {
+    filter: url(#greenScale);
   }
 }
 @media screen and (min-width: 1000px) and (max-height: 1000px) {
