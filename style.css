@@ -238,7 +238,7 @@ button {
   .brainImage {
     transform: rotate(-25deg) scale(0.7);
     top: -35%;
-    left: -30%;
+    left: -40%;
   }
   .counter {
     filter: url(#greenScale);

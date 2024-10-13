@@ -8,7 +8,49 @@
     <script src="index.js" defer></script>
   </head>
   <body>
-    <svg viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
+    <div class="wrapper">
+      <div class="device">
+        <div class="info">
+          <div class="level"></div>
+          <div class="points"></div>
+        </div>
+        <div class="start-screen">
+          <div class="title">
+            <div class="brainImage"></div>
+            <div class="titleImage"></div>
+          </div>
+          <div class="button-wrapper">
+            <button class="startBtn">
+              <div class="btnText">Start</div>
+            </button>
+          </div>
+        </div>
+        <div class="result-container">
+          <div class="result"></div>
+          <div class="button-wrapper">
+            <button class="startBtn try-again">
+              <div>Try again</div>
+            </button>
+          </div>
+        </div>
+        <div class="content">
+          <div class="button11">
+            <button disabled class="t"></button>
+          </div>
+          <div class="button21">
+            <button disabled class="cl"></button>
+          </div>
+          <div class="button22">
+            <button disabled class="cr"></button>
+          </div>
+          <div class="button31">
+            <button disabled class="b"></button>
+          </div>
+          <div disabled class="counter">3</div>
+        </div>
+      </div>
+    </div>
+    <svg style="height: 0" viewBox="0 0 0 0" xmlns="http://www.w3.org/2000/svg">
       <defs>
         <filter id="pixelate" x="0" y="0">
           <feFlood x="5" y="5" height="1" width="1" />
@@ -56,47 +98,5 @@
         </filter>
       </defs>
     </svg>
-    <div class="wrapper">
-      <div class="device">
-        <div class="info">
-          <div class="level"></div>
-          <div class="points"></div>
-        </div>
-        <div class="start-screen">
-          <div class="title">
-            <div class="brainImage"></div>
-            <div class="titleImage"></div>
-          </div>
-          <div class="button-wrapper">
-            <button class="startBtn">
-              <div class="btnText">Start</div>
-            </button>
-          </div>
-        </div>
-        <div class="result-container">
-          <div class="result"></div>
-          <div class="button-wrapper">
-            <button class="startBtn try-again">
-              <div>Try again</div>
-            </button>
-          </div>
-        </div>
-        <div class="content">
-          <div class="button11">
-            <button disabled class="t"></button>
-          </div>
-          <div class="button21">
-            <button disabled class="cl"></button>
-          </div>
-          <div class="button22">
-            <button disabled class="cr"></button>
-          </div>
-          <div class="button31">
-            <button disabled class="b"></button>
-          </div>
-          <div disabled class="counter">3</div>
-        </div>
-      </div>
-    </div>
   </body>
 </html>
