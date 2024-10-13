@@ -145,7 +145,7 @@ button {
   }
   .content {
     width: 70%;
-    filter: url(#pixelate2) url(#greenScale);
+    filter: url(#greenScale);
     gap: 4px;
   }
   .info {
@@ -157,11 +157,15 @@ button {
   .cr,
   .b {
     width: 85%;
-    filter: url(#pixelate3) url(#greenScale);
+    filter: url(#pixelate2) url(#greenScale);
   }
   .result {
     font-size: 18px;
     padding: 0;
+  }
+  .startBtn.try-again {
+    font-size: 28px;
+    margin-bottom: -8px;
   }
 }
 @media screen and (min-width: 1000px) and (max-height: 1000px) {
@@ -209,9 +213,8 @@ button {
 .b {
   border-radius: 100%;
   width: 100%;
-  opacity: 70%;
+  opacity: 0.7;
   cursor: pointer;
-  filter: url(#pixelate) url(#greenScale);
 }
 .t:enabled:active,
 .cl:enabled:active,
