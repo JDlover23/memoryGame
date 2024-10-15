@@ -13,6 +13,7 @@ const cr = document.querySelector(".cr");
 const b = document.querySelector(".b");
 const counter = document.querySelector(".counter");
 const info = document.querySelector(".info");
+const brainImage = document.querySelector(".brainImage2");
 const levelEl = document.querySelector(".level");
 const pointsEl = document.querySelector(".points");
 const startBtn = document.querySelector(".startBtn");
@@ -24,9 +25,9 @@ const sound4 = new Audio("4.wav");
 
 const buttons = [
   { el: t, sound: sound1, key: "w", key2: "ArrowUp" },
-  { el: cl, sound: sound2, key: "a", key2: "ArrowLeft" },
+  { el: cl, sound: sound4, key: "a", key2: "ArrowLeft" },
   { el: cr, sound: sound3, key: "d", key2: "ArrowRight" },
-  { el: b, sound: sound4, key: "s", key2: "ArrowDown" },
+  { el: b, sound: sound2, key: "s", key2: "ArrowDown" },
 ];
 pointsEl.innerHTML = `POINTS ${points}`;
 levelEl.innerHTML = `LEVEL ${level}`;
@@ -61,6 +62,7 @@ function initStats() {
   resultContainer.style.display = "none";
   content.style.opacity = "1";
   info.style.display = "block";
+  brainImage.style.display = "block";
 }
 function initTimeouts() {
   setTimeout(() => {
