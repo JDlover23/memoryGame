@@ -28,7 +28,7 @@ button {
   background: black;
   color: white;
   border: 3px solid white;
-  filter: url(#pixelate2) url(#greenScale);
+  filter: url(#greenScale);
   font-size: 56px;
   justify-content: center;
   align-items: center;
@@ -47,7 +47,7 @@ button {
   z-index: 1;
 }
 .title {
-  filter: url(#greenScale) url(#pixelate2);
+  filter: url(#greenScale);
   width: 50%;
   height: 50%;
   margin: auto;
@@ -102,7 +102,7 @@ button {
   height: 72px;
   align-self: end;
   justify-self: end;
-  filter: url(#greenScale) url(#pixelate2);
+  filter: url(#greenScale);
 }
 .info {
   display: none;
@@ -111,13 +111,13 @@ button {
   padding: 12px;
   background: grey;
   border: 2px solid black;
-  filter: url(#greenScale) url(#pixelate2);
+  filter: url(#greenScale);
   font-size: 24px;
 }
 .counter {
   font-size: 92px;
   align-self: center;
-  filter: url(#pixelate) url(#greenScale);
+  filter: url(#greenScale);
   grid-area: counter;
   color: grey;
 }
@@ -126,7 +126,7 @@ button {
   color: white;
 }
 .content {
-  filter: url(#pixelate2) url(#greenScale);
+  filter: url(#greenScale);
   opacity: 0;
   display: grid;
   position: absolute;
@@ -183,7 +183,7 @@ button {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  filter: url(#pixelate2) url(#greenScale);
+  filter: url(#greenScale);
   margin: auto;
   font-size: 36px;
   font-weight: bold;
@@ -208,7 +208,7 @@ button {
   }
   .counter {
     font-size: 36px;
-    filter: url(#pixelate2) url(#greenScale);
+    filter: url(#greenScale);
   }
   .content {
     width: 70%;
@@ -238,18 +238,14 @@ button {
     left: 50%;
     transform: translate(-50%);
   }
-  .startBtn {
-    filter: url(#greenScale);
-  }
   .brainImage {
     transform: rotate(-25deg) scale(0.7);
     top: -35%;
     left: -40%;
   }
-  .counter {
-    filter: url(#greenScale);
-  }
-  .info {
+  .counter,
+  .info,
+  .startBtn {
     filter: url(#greenScale);
   }
 }
@@ -260,10 +256,18 @@ button {
   }
   .content {
     width: 70%;
+    filter: url(#pixelate2) url(#greenScale);
   }
   .result {
     filter: url(#pixelate2) url(#greenScale);
     font-size: 36px;
+  }
+  .counter,
+  .info,
+  .startBtn,
+  .title,
+  .brainImage2 {
+    filter: url(#pixelate2) url(#greenScale);
   }
 }
 @media not all and (min-resolution: 0.001dpcm) {
@@ -271,11 +275,5 @@ button {
     transform: rotate(-25deg) scale(0.7);
     top: -35%;
     left: -30%;
-  }
-  .counter,
-  .info,
-  .startBtn,
-  .title {
-    filter: url(#greenScale);
   }
 }
